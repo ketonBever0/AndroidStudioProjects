@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Testadat"
+            type="com.example.adatkotes.Testadatok" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/cim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI kalkulátor"
+            android:textSize="30dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="40dp"
+            android:layout_margin="20dp"
+
+            android:layout_marginBottom="30dp"
+            />
+
+        <TextView
+            android:id="@+id/magassagCim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Magasság (cm)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cim"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <EditText
+            android:id="@+id/magassagInput"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/magassagCim"
+            app:layout_constraintTop_toTopOf="@id/magassagCim"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/testsulyCim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Testsúly (kg)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/magassagCim"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <EditText
+            android:id="@+id/testsulyInput"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/testsulyCim"
+            app:layout_constraintTop_toTopOf="@id/testsulyCim"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/bmiCim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="BMI index"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testsulyCim"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/bmiErtek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="140dp"
+            android:text="@{String.valueOf(Testadat.bmiIndex)}"
+            app:layout_constraintStart_toEndOf="@+id/bmiCim"
+            app:layout_constraintTop_toTopOf="@+id/bmiCim"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/normalsulyCim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ideális testsúly:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bmiCim"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/normasulyErtek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="140dp"
+            android:text="@{String.valueOf(Testadat.idealisSuly)}"
+            app:layout_constraintStart_toEndOf="@id/normalsulyCim"
+            app:layout_constraintTop_toTopOf="@id/normalsulyCim"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Számolás"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/normasulyErtek"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

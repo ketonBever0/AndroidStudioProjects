@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.atlagfogyasztas'
+    namespace 'com.example.adatkotes'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.atlagfogyasztas"
+        applicationId "com.example.adatkotes"
         minSdk 24
         targetSdk 32
         versionCode 1
@@ -23,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures{
+        dataBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
