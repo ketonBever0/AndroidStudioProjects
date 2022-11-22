@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="Person"
+            type="com.example.recycleview.Person" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailF">
+
+        <TextView
+            android:id="@+id/detailFName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Person.FName}"
+            android:textSize="@dimen/detailTextNormalSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/detailTopMargin"
+            />
+
+        <TextView
+            android:id="@+id/detailLName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Person.LName}"
+            android:textSize="@dimen/detailTextNormalSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailFName"
+            android:layout_marginTop="@dimen/detailTopMargin"
+
+
+            />
+
+        <TextView
+            android:id="@+id/detailBirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(Person.birthYear)}"
+            android:textSize="@dimen/detailTextNormalSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailLName"
+            android:layout_marginTop="@dimen/detailTopMargin"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

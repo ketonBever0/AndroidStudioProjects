@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detailTextNormalSize">35sp</dimen>
+    <dimen name="detailTopMargin">30dp</dimen>
+    <dimen name="listitemTextSize">25dp</dimen>
+</resources>

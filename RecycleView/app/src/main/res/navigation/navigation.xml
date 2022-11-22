@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listF">
+    <fragment
+        android:id="@+id/listF"
+        android:name="com.example.recycleview.ListF"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listF_to_detailF2"
+            app:destination="@id/detailF2" />
+        <argument
+            android:name="curPerson"
+            app:argType="com.example.recycleview.Person" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailF2"
+        android:name="com.example.recycleview.DetailF"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="curPerson"
+            app:argType="com.example.recycleview.Person" />
+    </fragment>
+</navigation>
